@@ -1,0 +1,9 @@
+
+# Wiring RC522 to ESP32
+
+Using SPI
+
+SDA -> GPIO21
+SCK -> GPIO18
+MOSI -> GPIO23
+MISO -> GPIO19
