@@ -4,11 +4,11 @@
 #include <MFRC522DriverPinSimple.h>
 #include <MFRC522Debug.h>
 
-MFRC522DriverPinSimple ss_pin(21); 
+extern MFRC522DriverPinSimple ss_pin;
 
-MFRC522DriverSPI driver{ss_pin}; // Create SPI driver.
-//MFRC522DriverI2C driver{}; // Create I2C driver.
-MFRC522 rfid{driver};  // Create MFRC522 instance.
+extern MFRC522DriverSPI driver; // Create SPI driver.
+//extern MFRC522DriverI2C driver{}; // Create I2C driver.
+extern MFRC522 rfid;  // Create MFRC522 instance.
 
 void read_uid();
 void memdump();

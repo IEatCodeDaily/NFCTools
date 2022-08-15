@@ -1,5 +1,11 @@
 #include "RFID_reader.h"
 
+MFRC522DriverPinSimple ss_pin(21);
+
+MFRC522DriverSPI driver{ss_pin}; // Create SPI driver.
+//MFRC522DriverI2C driver{}; // Create I2C driver.
+MFRC522 rfid{driver};  // Create MFRC522 instance.
+
 void read_uid(){
   if (rfid.PICC_ReadCardSerial()) { // NUID has been readed
       MFRC522::PICC_Type piccType = rfid.PICC_GetType(rfid.uid.sak);

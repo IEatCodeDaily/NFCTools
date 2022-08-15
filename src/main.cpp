@@ -25,5 +25,3 @@ void setup() {
 void loop() {
   memdump();
 }
-
-
